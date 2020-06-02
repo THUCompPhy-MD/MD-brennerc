@@ -1,0 +1,14 @@
+
+caguts.f: calculates pair potential and neighbor list
+pibond.f: calculates many-body bond order for hydrocarbons
+sili_germ.f: calculates many-body bond order for silicon and germanium
+radic.f: spline needed for radical energetics for hydrocarbons
+sih.f: start of routine for Si-H interactions (not completed)
+param.f: sets up needed parameters
+bcuint.f: 2-d spline for hydrocarbons
+mtable.f: sets up look-up tables 
+tor.f: 3-d spline for torsional potential
+
+
+
+

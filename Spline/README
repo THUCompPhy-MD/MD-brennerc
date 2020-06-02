@@ -1,0 +1,13 @@
+
+
+This directory contains input files needed for the spline functions
+in the hydrocarbon potential. They should be accessed from this 
+directory with the file open.inc and need not be copied into the 
+user's area. 
+
+inter3d_ch.d: 3-d spline for hydrocarbons
+inter3d_iv_new.d: 3-d spline for hydrocarbons
+inter2d_iv.d 2-d: spline for hydrocarbons
+inter3dtors.d: spline for torsional potential 
+inter3d_h.d: 3-d spline for hydrogen
+

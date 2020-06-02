@@ -1,0 +1,12 @@
+*CLASSICAL DYNAMICS SIMULATION OF  diamond lattice                        
+
+TOTAL STEPS=      2 DATA WRITTEN EVERY    1 STEPS
+
+UNITS OF LENGTH, MASS, TIME AND ENERGY: 1 A  1 AMU  1 fs 103.6434 eV
+
+LANGEVIN PARAMETERS:        0.000 k PSEED=  0.980083
+
+        ENERGY(eV)     T      TSTEP(fs)  TIME(fs)
+
+     1   -7.36963204     0.000    0.500    0.500
+     2   -7.36963204     0.000    0.500    1.000

@@ -1,0 +1,12 @@
+
+This directory contains the following include files used in the code 
+
+common_files.inc: includes pathnames to standard common blocks
+parameters.inc: determines values of parameters like array sizes
+subroutines.inc: includes source code for subroutines
+open.inc: opens data files 
+close.inc: closes data files 
+
+
+Each of these include files should be copied into the users area,
+and can then be modified as needed. 

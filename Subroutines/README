@@ -1,0 +1,13 @@
+
+The subdirectories contain source code organized according to 
+the function of the code: 
+
+General: general routines needed for the simulation
+Special: specialized routines, such as those needed to move a tip
+         or generate a shock wave, are stored here as they are 
+         developed
+Bond_Order: routines for the bond-order potential
+Lennard_Jones: routines for the Lennard-Jones potential
+Tight_Binding: routines for the tight-binding potential
+EAM: routines for the embedded-atom method
+

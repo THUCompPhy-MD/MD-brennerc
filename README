@@ -1,0 +1,82 @@
+
+This is a suite of molecular dynamics and interatomic force routines 
+developed by D.W. Brenner, J.A. Harrison S.B. Sinnott and O. Shenderova. 
+I have tried to make this code as modular as possible so that new  
+subroutines can be added as they are developed. The code currently 
+includes forces and energies for the newest version of the hydrocarbon 
+potential, Tersoff's silicon-III and germanium potentials, Lennard-Jones 
+interactions, and the Xu/Ho tight-binding parameterization for carbon. 
+Embedded-atom potentials as well as other tight binding parameterizations 
+will be added in the near future. 
+
+The subdirectories are organized according to the files that they contain.  
+The intention is that these files be kept in a safe place,  preferably with 
+read only privilages. The subroutines and input files can be copied into 
+the areas of individual users as needed, and the routines then customized.
+This leaves the original source for other users. Also, with this structure 
+access to rather large input files needed for the splines is made through 
+include files (denoted by the suffix .inc) so that multiple copies of these
+files do not need to be kept. README files in the subdirectories give 
+specific information about those directories. 
+
+The main routine is ./Subroutines/General/main.f. Source code for subroutines,
+which are kept under the directory ./Subroutines, are appended to the end of
+main.f with the include file subroutines.inc. If one wants to add a specialized 
+routine, this is done by adding the name of the file containing the routine to 
+the list in subroutines.inc. 
+
+Parameters governing things such as the maximum number of atoms, the maximum 
+number of steps, size of arrays for neighbor lists, etc. are determined by 
+the include file parameters.inc which is stored in the directory ./Include. 
+A brief description of what some of the parameters correspond to are in this file. 
+
+Common blocks are added to the routines through the include file 
+commons_files.inc which is stored in the directory ./Include.. This file is 
+currently set up to use the commons in the subdirectory ./Commons. These can be 
+customized by copying the appropriate common blocks into the user's area, 
+making the changes, and then modifying commons_files.inc to include the new 
+common block.
+
+Each of the include files from ./Include as well as the desired subroutines 
+from the directories under ./Subroutines should be copied into the user's
+area and pathnames appropriately modified. 
+
+The subdirectory `Execute' contains copies of files from the other 
+directories that are required to run the basic code. 
+
+
+README files in the other subdirectories specify what is in those directories. 
+
+Execute: 
+
+This contains copies from the other directories of all of the 
+files needed to run the basic code. The main code which calls 
+the other subroutines is `main.f'. There are very brief comments
+in this file that specify what is done by each subroutine.
+
+To compile the code 
+
+f77 -o main.x main.f 
+
+In addition, using the O3 level of optimization on my SGI speeds 
+up execution of the code. 
+
+Source code for the subroutines that are called in `main.f' 
+are appended to the end of this file with the include file 
+`subroutines.inc'.  If one wants to add a specialized routine, 
+this is done by adding the name of the file containing the 
+routine to the list in `subroutines.inc'.  
+
+Parameters governing things such as the maximum number of 
+atoms, the maximum number of steps, size of arrays for 
+neighbor lists, etc. are determined by the include file 
+`parameters.inc'. A brief description of what some of the 
+parameters correspond to are in this file.  
+
+Common blocks are added to the routines through the include 
+file `commons_files.inc'. It is currently set up to use the 
+commons in the subdirectory `Commons'. These can be customized
+by copying the appropriated common blocks into the user's area,
+making the changes, and then modifying `commons.inc' to 
+include the new common block. 
+

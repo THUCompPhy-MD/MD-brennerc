@@ -1,0 +1,13 @@
+
+tight_bind.f: main routine for tight-binding potential
+E_corr.f: calculate classical pair sum interactions
+xkorjaus.f: derivative of classical pair sum
+eispack.f: standard routines for matrix algebra
+neighbor_tb.f: calculate neighbor list 
+force_tb.f: calculates orbital forces
+laske_H.f: sets up tight-binding Hamiltonian
+smooth.f: function for distance dependence of Hamiltonian elements 
+dsmooth.f: derivative of smooth.f
+dos.f: calculates local and global densities of electronic states
+tilatiheys.f: old code for density of states 
+

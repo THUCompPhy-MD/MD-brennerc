@@ -1,0 +1,20 @@
+
+This directory contains a sample input file input.f that contains 
+information needed to run the simulations such as the number of 
+steps, how often to write data, type of thermostat, temperature, 
+etc. Descriptions are briefly given in the file. The file also 
+specifies a list Lennard-Jones parameters, with one set per line. 
+They are:
+
+atomic #, atomic mass, epsilon (in K), sigma (in A).
+
+If the atomic # is negative the code does use this set of
+parameters, and there will not be Lennard-Jones interactions
+for that atom. This allows the parameters to be stored in
+the data file without having to use them. Standard combination
+rules are used to heterogeneous pairs of atoms. The C-C,
+H-H and C-H Lennard-Jones interactions are truncated to
+zero at about 0.9 times the maximum interaction distance
+for the hydrocarbon potential. Coulomb forces are currently
+not in the code.
+

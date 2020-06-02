@@ -1,0 +1,8 @@
+The directory contains the following common blocks currently used by the 
+code. 
+
+common_lj_new.inc: common blocks associated with the Lennard-Jones potential
+common_tb.inc: common blocks associated with the tight-binding potential
+common_ch.inc: common blocks associated with bond-order potentials
+common_md.inc: general common blocks needed for the classical trajectories
+

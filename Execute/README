@@ -1,0 +1,19 @@
+
+This directory contains sample files needed to execute the code. 
+The atomic coordinates are accessed from the file `coord.d' and data 
+needed to run the code is in the file `input.d'. After execution the 
+code generates several output files of which `output.d' contains 
+the general data. 
+
+To compile the code use 
+
+f77 -o main.x main.f
+
+and use 
+
+main.x
+
+to execute. The sample files contain data to simulate a piece of diamond 
+with periodic boundaries for 10 steps. 
+
+

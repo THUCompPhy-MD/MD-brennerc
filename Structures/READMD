@@ -1,0 +1,36 @@
+
+This directory contains some sample coordination files, mainly 
+for carbon-based structures. The format, currently used by these 
+codes, is
+
+1:  Header specifying contents of system
+2:  Number of atoms
+3:  total time and timestep in femtoseconds
+4:  x,y,z, box sides for periodic boundaries in Angstroms
+
+    ********A LARGE value is used for no periodic boundaries*******
+    ********in that direction. This is new for this version.*******
+
+next np lines: atom number, atomic number, x,y,z coordinates, imotion
+
+    The final integer species constrains on that atom's motion.
+    =1: thermostat (if any) is applied to that atom
+    =2: rigid atom - not allowed to move
+    all others: motion governed by potential only.
+
+remaining lines give atom number and higher derivatives of positions
+with respect to time.
+
+Other files:
+
+pos_to_xmol.f: converts new format to xmol file.
+
+
+
+
+
+. The file old_to_newpos.f converts the old
+format to the new format. 
+
+
+

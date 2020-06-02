@@ -1,0 +1,6 @@
+
+
+ljparam.f: sets up Lennard-Jones parameters
+ljguts.f: calculate neighbor list and Lennard-Jones interactions
+ljcset.f: sets up Lennard-Jones lookup tables
+ljcont.f: calculates Lennard-Jones forces for smooth surface 
