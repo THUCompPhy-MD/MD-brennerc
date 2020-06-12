@@ -82,76 +82,7 @@ C
 C
    2  CONTINUE
    1  CONTINUE
-C
-C UPDATE NEIGHBOR LIST?
-C
-      RSQCRT=(0.5d0*RLL)**2
-      DO 4 I=1,NP
-      RSQ=0.0D0
-      DO 3 J=1,3
-           R=R0(I,J)-R0L(I,J)
-           R = R - CUBE(J)*ANINT(R/CUBE(J))
-           RSQ=RSQ+R*R
-C
-3     CONTINUE
-           IF(RSQ.GT.RSQCRT) GO TO 5
-4     CONTINUE
-      LCHK=2
-      GO TO 8
-C
 
-5     CONTINUE
-
-C
-C UPDATE NEIGHBOR LIST
-C
-      DO 7 J=1,3
-           DO 6 I=1,NP
-                R0L(I,J)=R0(I,J)
-6          CONTINUE
-7     CONTINUE
-C
-      KCHK=KCHK+1
-C      NCHK(KCHK)=KB
-      LCHK=1
-C
-8     CONTINUE
-C
-      IF(NP.EQ.NMA) RETURN
-c      RETURN
-C
-C***IMPORTANT********************************
-C                                           *
-C IF NO RIGID ATOMS, SUBTRACT COM VELOCITY  *
-C                                           *
-C REMOVE THIS CODE FOR MOLECULAR COLLISION  *
-C                                           *
-C********************************************
-C
-C
-      ICCC=2
-      IF(ICCC.EQ.1) THEN
-      XMT=0.0D0
-C
-      DO 24 I=1,NP
-           XMT=XMT+XMASS(KTYPE(I))
-24    CONTINUE
-C
-      DO 27 MM=1,3
-           COM(MM)=0.0d0
-c
-           DO 25 I=1,NP
-               COM(MM)=COM(MM)+R1(I,MM)*XMASS(KTYPE(I))
-25         CONTINUE
-c
-           COM(MM)=COM(MM)/XMT
-c
-           DO 26 I=1,NP
-                R1(I,MM)=R1(I,MM)-COM(MM)
-26         CONTINUE
-27    CONTINUE
-      ENDIF
-C
       RETURN
       END
 
